@@ -6,8 +6,15 @@ public class NombreDeMots {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        // Nom du fichier à lire
-        String nomFichier = "fichier.txt";
+        // Vérifier si l'utilisateur a fourni le nom du fichier en argument
+        if (args.length == 0) {
+            System.out.println("Veuillez spécifier un fichier.");
+            System.out.println("Exemple : java NombreDeMots fichier.txt");
+            return;
+        }
+
+        // Récupérer le nom du fichier depuis les arguments
+        String nomFichier = args[0];
 
         // Compteur total de mots
         int totalMots = 0;
@@ -33,7 +40,7 @@ public class NombreDeMots {
             // Afficher la ligne et son nombre de mots
             System.out.println("Ligne : \"" + ligne + "\"");
             System.out.println("Mots dans cette ligne : " + nombreMotsLigne);
-            System.out.println("\n");
+            System.out.println("---");
 
             // Additionner au total
             totalMots += nombreMotsLigne;
@@ -43,6 +50,6 @@ public class NombreDeMots {
         lecteur.close();
 
         // Afficher le total
-        System.out.println("\n TOTAL : " + totalMots + " mots ");
+        System.out.println("\nTOTAL : " + totalMots + " mots");
     }
 }
