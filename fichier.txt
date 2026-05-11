@@ -1,2 +1,0 @@
-Bonjour tout le monde
-Java est un langage de programmation orienté objet

@@ -2,14 +2,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class NombreDeMots {
+public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
 
         // Vérifier si l'utilisateur a fourni le nom du fichier en argument
         if (args.length == 0) {
             System.out.println("Veuillez spécifier un fichier.");
-            System.out.println("Exemple : java NombreDeMots fichier.txt");
+            System.out.println("Exemple : java NombreDeMots TestExercice3.txt");
             return;
         }
 
